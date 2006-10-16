@@ -1,4 +1,4 @@
-module L2MuonIsolation = L2MuonIsolationProducer {
+module L2MuonIsolations = L2MuonIsolationProducer {
       untracked string StandAloneCollectionLabel = "L2Muons"
       untracked string CaloTowerCollectionLabel = "towerMaker"
 
