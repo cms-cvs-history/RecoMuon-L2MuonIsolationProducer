@@ -5,32 +5,14 @@ module L2MuonIsolations = L2MuonIsolationProducer {
       vdouble ConeSizes = { 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24 }
       vdouble Thresholds = { 5.50, 5.50, 5.90, 5.70, 5.10, 4.90, 5.00, 5.00, 5.10, 5.00, 4.80, 4.80, 4.70, 4.70, 3.50, 3.10, 3.50, 3.90, 3.70, 3.70, 3.50, 3.50, 3.20, 3.30, 3.40, 3.40 }
 
-      double EcalWeight = 1.5
-
       bool OutputMuIsoDeposits = true
 
-      PSet EcalExtractorParameters = {
+      PSet CalExtractorParameters = {
             untracked string CaloTowerCollectionLabel = "towerMaker"
-            untracked string DepositLabel = "Ecal"
+            untracked string DepositLabel = "EcalPlusHcal"
 
-            double Weight_E = 1
-            double Weight_H = 0
-            double Threshold_E = 0.2
-            double Threshold_H = 0.5
-            double DR_Veto_E = 0.07
-            double DR_Veto_H = 0.10
-            double DR_Max = 1.0
-
-            bool Vertex_Constraint_XY = false
-            bool Vertex_Constraint_Z = false
-      }
-
-      PSet HcalExtractorParameters = {
-            untracked string CaloTowerCollectionLabel = "towerMaker"
-            untracked string DepositLabel = "Hcal"
-
-            double Weight_E = 0
-            double Weight_H = 1
+            double Weight_E = 1.5
+            double Weight_H = 1.0
             double Threshold_E = 0.2
             double Threshold_H = 0.5
             double DR_Veto_E = 0.07
