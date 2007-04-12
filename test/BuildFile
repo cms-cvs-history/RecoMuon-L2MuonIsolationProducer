@@ -7,5 +7,5 @@
 <use name=root>
 
 <library file="L2MuonIsolationAnalyzer.cc" name=L2MuonIsolationAnalyzer>
-  <flags SEAL_PLUGIN_NAME="L2MuonIsolationAnalyzer"> 
+  <flags EDM_PLUGIN=1> 
 </library> 
